@@ -24,7 +24,7 @@ sif_weightfile: data/sif/enwiki_vocab_min200.txt
 infersent_w2v_file: glove.txt
 
 # Web server config
-flask_host: 127.0.0.1
+flask_host: 0.0.0.0
 flask_port: 8888
 
 # Default values (can be adjusted in web app)
@@ -55,4 +55,4 @@ use_ontology: false
 
 number_of_runs: 1
 
-app_name: "MirkoLenz/ReCAP-Argument-Graph-Retrieval"
+app_name: "recap-utr/argument-graph-retrieval"
