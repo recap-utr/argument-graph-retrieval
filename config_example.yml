@@ -9,8 +9,8 @@ texify: false
 language: english
 
 # Folder names
-casebase_folder: data/case-base/english/microtexts-annotated
-queries_folder: data/queries/english/microtexts-annotated
+casebase_folder: data/case-base/english/microtexts-plain
+queries_folder: data/queries/english/microtexts-plain
 embeddings_folder: data/embeddings/english
 candidates_folder: data/candidates/microtexts
 results_folder: data/results
