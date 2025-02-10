@@ -1,3 +1,4 @@
+
 from __future__ import absolute_import, annotations
 
 import json
@@ -45,8 +46,16 @@ class Evaluation(object):
             self.system_rankings[res.graph.filename] = i + 1
 
         self.system_candidates = list(self.system_rankings.keys())
-
-        self._calculate_metrics(case_base, results)
+        
+        if not self.user_candidates or not self.system_candidates:
+            self.precision = 0
+            self.recall = 0
+            self.average_precision = 0
+            self.correctness = 0
+            self.completeness = 0
+            self.ndcg = 0
+        else:
+            self._calculate_metrics(case_base, results)
 
     def as_dict(self):
         return {
