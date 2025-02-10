@@ -94,13 +94,13 @@ class SifWeights:
     @staticmethod
     def get_instance():
         """ Static access method. """
-        if SifWeights._instance == None:
+        if SifWeights._instance is None:
             SifWeights()
         return SifWeights._instance
 
     def __init__(self):
         """ Virtually private constructor. """
-        if SifWeights._instance != None:
+        if SifWeights._instance is not None:
             raise Exception("This class is a singleton!")
         else:
             SifWeights._instance = self

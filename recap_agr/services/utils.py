@@ -23,15 +23,15 @@ class Config:
     _config_error = "The key is not defined in 'config.yml'. This is most likely caused by an old version of that file. Look at 'config_example.yml' to see all options."
 
     @staticmethod
-    def get_instance():
+    def get_instance() -> Config:
         """ Static access method. """
-        if Config._instance == None:
+        if Config._instance is None:
             Config()
         return Config._instance
 
     def __init__(self):
         """ Virtually private constructor. """
-        if Config._instance != None:
+        if Config._instance is not None:
             raise Exception("This class is a singleton!")
         else:
             Config._instance = self

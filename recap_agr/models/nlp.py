@@ -50,7 +50,7 @@ class Embeddings(object):
 
     def __init__(self):
         """ Virtually private constructor. """
-        if Embeddings._instance != None:
+        if Embeddings._instance is not None:
             raise Exception("This class is a singleton!")
         else:
             Embeddings._instance = {

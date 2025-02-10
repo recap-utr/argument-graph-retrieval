@@ -41,7 +41,7 @@ class Ontology(object):
 
     def __init__(self) -> None:
         """ Virtually private constructor. """
-        if Ontology._instance != None:
+        if Ontology._instance is not None:
             raise Exception("This class is a singleton!")
         else:
             Ontology._instance = self
