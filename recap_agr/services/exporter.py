@@ -38,9 +38,9 @@ def get_results(results: List[Result]) -> List[Dict[str, Any]]:
 
 def export_results(
     query_file_name: str,
-    mac_results: List[Dict[str, Any]],
+    mac_results: Optional[List[Dict[str, Any]]],
     fac_results: Optional[List[Dict[str, Any]]],
-    evaluation: Evaluation,
+    evaluation: Optional[Evaluation],
 ) -> None:
     """Write the results to csv files
 
@@ -56,10 +56,11 @@ def export_results(
     if not os.path.exists(config["results_folder"]):
         os.makedirs(config["results_folder"])
 
-    with open("{}-mac.csv".format(filename), "w", newline="") as csvfile:
-        csvwriter = csv.DictWriter(csvfile, fieldnames)
-        csvwriter.writeheader()
-        csvwriter.writerows(mac_results)
+    if mac_results:
+        with open("{}-mac.csv".format(filename), "w", newline="") as csvfile:
+            csvwriter = csv.DictWriter(csvfile, fieldnames)
+            csvwriter.writeheader()
+            csvwriter.writerows(mac_results)
 
     if fac_results:
         with open("{}-fac.csv".format(filename), "w", newline="") as csvfile:
@@ -67,18 +68,19 @@ def export_results(
             csvwriter.writeheader()
             csvwriter.writerows(fac_results)
 
-    eval_dict = evaluation.as_dict()
-    with open("{}-eval.csv".format(filename), "w", newline="") as csvfile:
-        csvwriter = csv.DictWriter(csvfile, ["metric", "value"])
-        csvwriter.writeheader()
-
-        if "unranked" in eval_dict:
-            for key, value in eval_dict["unranked"].items():
-                csvwriter.writerow({"metric": key, "value": value})
-
-        if "ranked" in eval_dict:
-            for key, value in eval_dict["ranked"].items():
-                csvwriter.writerow({"metric": key, "value": value})
+    if evaluation:
+        eval_dict = evaluation.as_dict()
+        with open("{}-eval.csv".format(filename), "w", newline="") as csvfile:
+            csvwriter = csv.DictWriter(csvfile, ["metric", "value"])
+            csvwriter.writeheader()
+    
+            if "unranked" in eval_dict:
+                for key, value in eval_dict["unranked"].items():
+                    csvwriter.writerow({"metric": key, "value": value})
+    
+            if "ranked" in eval_dict:
+                for key, value in eval_dict["ranked"].items():
+                    csvwriter.writerow({"metric": key, "value": value})
 
 
 def get_results_aggregated(
