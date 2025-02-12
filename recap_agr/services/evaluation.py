@@ -23,6 +23,8 @@ class Evaluation(object):
     Candiates are fetched automatically from a file.
     The order of the candiates is not relevant for the calculations.
     """
+    
+    duration: float
 
     user_candidates: List[str]
     user_rankings: Dict[str, int]
@@ -37,8 +39,9 @@ class Evaluation(object):
     ndcg: float
 
     def __init__(
-        self, case_base: Dict[str, Graph], results: List[Result], query: Graph
+        self, case_base: Dict[str, Graph], results: List[Result], query: Graph, duration: float
     ) -> None:
+        self.duration = duration
         self._get_candidates(case_base, query.filename)
 
         self.system_rankings = OrderedDict()
@@ -64,6 +67,7 @@ class Evaluation(object):
                 "Recall": self.recall,
                 "F1 Score": self.f_score(1),
                 "F2 Score": self.f_score(2),
+                "Duration": self.duration,
             },
             "ranked": {
                 "Average Precision": self.average_precision,

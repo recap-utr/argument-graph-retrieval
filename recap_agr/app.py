@@ -111,9 +111,10 @@ def run() -> None:
                         )
 
                         for query_graph in query_graphs.values():
-                            mac = [Result(graph, 0.0) for graph in graphs.values()]
+                            mac = [Result(graph, 0.0, 0.0) for graph in graphs.values()]
                             fac = None
                             evaluation = None
+                            query_start_time = timer()
 
                             if config["perform_mac"]:
                                 mac = similarity.graphs_similarity(graphs, query_graph)
@@ -122,7 +123,7 @@ def run() -> None:
                                 if config["retrieval_limit"] > 0:
                                     mac = mac[: config["retrieval_limit"]]
 
-                                evaluation = Evaluation(graphs, mac, query_graph)
+                                evaluation = Evaluation(graphs, mac, query_graph, timer() - query_start_time)
 
                             if config["perform_fac"]:
                                 fac = retrieval.fac(mac, query_graph)
@@ -131,8 +132,9 @@ def run() -> None:
                                 if config["retrieval_limit"] > 0:
                                     fac = fac[: config["retrieval_limit"]]
 
-                                evaluation = Evaluation(graphs, fac, query_graph)
+                                evaluation = Evaluation(graphs, fac, query_graph, timer() - query_start_time)
 
+                            assert evaluation is not None
                             evaluations.append(evaluation)
 
                             if config["export_results"]:

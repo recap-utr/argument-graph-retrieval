@@ -5,6 +5,7 @@ import logging
 import multiprocessing
 import random
 from typing import Dict, List, Tuple, Union, Optional
+from timeit import default_timer as timer
 
 from ..models.graph import Edge, Graph, Node
 from ..models.mapping import Mapping, SearchNode
@@ -44,6 +45,7 @@ def a_star_search(
 ) -> Result:
     """Perform an A* analysis of the case base and the query"""
 
+    start_time = timer()
     q: List[SearchNode] = []
     s0 = SearchNode(query_graph.all_nodes, query_graph.edges)
 
@@ -63,6 +65,7 @@ def a_star_search(
         candidate.mapping.get_similarity(
             len(query_graph.all_nodes), len(query_graph.edges)
         ),
+        timer() - start_time,
     )
 
 

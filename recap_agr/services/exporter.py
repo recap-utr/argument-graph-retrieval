@@ -30,6 +30,7 @@ def get_results(results: List[Result]) -> List[Dict[str, Any]]:
                 "rank": i + 1,
                 "similarity": np.around(result.similarity, 3),
                 "text": result.graph.text,
+                "duration": result.duration,
             }
         )
 
@@ -40,7 +41,7 @@ def export_results(
     query_file_name: str,
     mac_results: Optional[List[Dict[str, Any]]],
     fac_results: Optional[List[Dict[str, Any]]],
-    evaluation: Optional[Evaluation],
+    evaluation: Evaluation,
 ) -> None:
     """Write the results to csv files
 
@@ -68,19 +69,18 @@ def export_results(
             csvwriter.writeheader()
             csvwriter.writerows(fac_results)
 
-    if evaluation:
-        eval_dict = evaluation.as_dict()
-        with open("{}-eval.csv".format(filename), "w", newline="") as csvfile:
-            csvwriter = csv.DictWriter(csvfile, ["metric", "value"])
-            csvwriter.writeheader()
-    
-            if "unranked" in eval_dict:
-                for key, value in eval_dict["unranked"].items():
-                    csvwriter.writerow({"metric": key, "value": value})
-    
-            if "ranked" in eval_dict:
-                for key, value in eval_dict["ranked"].items():
-                    csvwriter.writerow({"metric": key, "value": value})
+    eval_dict = evaluation.as_dict()
+    with open("{}-eval.csv".format(filename), "w", newline="") as csvfile:
+        csvwriter = csv.DictWriter(csvfile, ["metric", "value"])
+        csvwriter.writeheader()
+
+        if "unranked" in eval_dict:
+            for key, value in eval_dict["unranked"].items():
+                csvwriter.writerow({"metric": key, "value": value})
+
+        if "ranked" in eval_dict:
+            for key, value in eval_dict["ranked"].items():
+                csvwriter.writerow({"metric": key, "value": value})
 
 
 def get_results_aggregated(

@@ -13,3 +13,4 @@ class Result(object):
 
     graph: Graph
     similarity: np.ndarray
+    duration: float

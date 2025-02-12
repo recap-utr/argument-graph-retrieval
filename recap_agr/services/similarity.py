@@ -3,6 +3,7 @@ from __future__ import absolute_import, annotations
 import logging
 from operator import itemgetter
 from typing import Any, Dict, List, Set, Tuple
+from timeit import default_timer as timer
 
 import numpy as np
 import scipy
@@ -44,11 +45,12 @@ class Similarity(object):
     ) -> List[Result]:
         """Compute similarity between multiple graphs"""
 
+        start_time = timer()
         similarities: List[Result] = []
 
         for graph in graphs.values():
             similarities.append(
-                Result(graph, self.graph_similarity(graph, query_graph))
+                Result(graph, self.graph_similarity(graph, query_graph), timer() - start_time)
             )
 
         similarities = sorted(
