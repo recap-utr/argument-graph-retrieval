@@ -39,6 +39,24 @@ class Similarity(object):
         else:
             Similarity._instance = self
 
+    def graphs_ideal_similarity(
+        self,
+        graphs: Dict[str, Graph],
+        query_graph: Graph,
+        user_rankings: Dict[str, int],
+    ) -> List[Result]:
+        """Compute similarity between multiple graphs"""
+
+        similarities: List[Result] = []
+        max_ranking = max(user_rankings.values())
+
+        for filename, user_ranking in user_rankings.items():
+            similarities.append(
+                Result(graphs[filename], user_ranking / max_ranking, 0.0)
+            )
+
+        return sorted(similarities, key=lambda result: result.similarity, reverse=True)
+
     def graphs_similarity(
         self, graphs: Dict[str, Graph], query_graph: Graph
     ) -> List[Result]:

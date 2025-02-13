@@ -17,6 +17,18 @@ logger = logging.getLogger("recap")
 config = utils.Config.get_instance()
 
 
+
+def get_candidates(case_base: Dict[str, Graph], query: Graph) -> Tuple[List[str], Dict[str, int]]:
+    filepath = os.path.join(config["candidates_folder"], query.filename)
+    
+    try:
+        with open(filepath) as file:
+            data = json.load(file)
+            return data["candidates"], data["rankings"]
+    except Exception:
+        return [], {}
+
+
 class Evaluation(object):
     """Class for calculating and storing evaluation measures
 
@@ -39,7 +51,7 @@ class Evaluation(object):
     def __init__(
         self, case_base: Dict[str, Graph], results: List[Result], query: Graph
     ) -> None:
-        self._get_candidates(case_base, query.filename)
+        self.user_candidates, self.user_rankings = get_candidates(case_base, query)
 
         self.system_rankings = OrderedDict()
         for i, res in enumerate(results):
@@ -72,18 +84,6 @@ class Evaluation(object):
                 "Completeness": self.completeness,
             },
         }
-
-    def _get_candidates(self, case_base: Dict[str, Graph], filename: str) -> None:
-        filepath = os.path.join(config["candidates_folder"], filename)
-
-        try:
-            with open(filepath) as file:
-                data = json.load(file)
-                self.user_candidates = data["candidates"]
-                self.user_rankings = data["rankings"]
-        except Exception:
-            self.user_candidates = []
-            self.user_rankings = {}
 
     def _calculate_metrics(
         self, case_base: Dict[str, Graph], results: List[Result]

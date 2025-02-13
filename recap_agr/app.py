@@ -15,7 +15,7 @@ from .models.graph import Graph
 from .models.nlp import Embeddings
 from .models.result import Result
 from .services import exporter, importer, retrieval, utils
-from .services.evaluation import Evaluation
+from .services.evaluation import Evaluation, get_candidates
 from .services.similarity import Similarity
 from .services.token_weighter import TokenWeighter
 from .services.vectorizer import Vectorizer
@@ -108,12 +108,23 @@ def run() -> None:
                         )
 
                         for query_graph in query_graphs.values():
-                            mac = [Result(graph, 0.0, 0.0) for graph in graphs.values()]
+                            mac = [Result(graph, 1.0, 0.0) for graph in graphs.values()]
                             fac = None
                             evaluation = None
 
                             if config["perform_mac"]:
-                                mac = similarity.graphs_similarity(graphs, query_graph)
+                                if config["ideal_mac"]:
+                                    _, user_rankings = get_candidates(
+                                        graphs, query_graph
+                                    )
+                                    mac = similarity.graphs_ideal_similarity(
+                                        graphs, query_graph, user_rankings
+                                    )
+                                else:
+                                    mac = similarity.graphs_similarity(
+                                        graphs, query_graph
+                                    )
+
                                 mac_results = exporter.get_results(mac)
 
                                 if config["retrieval_limit"] > 0:
@@ -213,6 +224,7 @@ def _update_config() -> None:
     config["a_star_queue_limit"] = int(flask.request.form["a-star-queue-limit"])
     config["perform_fac"] = bool(flask.request.form.get("perform-fac", False))
     config["perform_mac"] = bool(flask.request.form.get("perform-mac", False))
+    config["ideal_mac"] = bool(flask.request.form.get("perform-mac", False))
     config["use_schemes"] = bool(flask.request.form.get("use-schemes", False))
     config["use_ontology"] = bool(flask.request.form.get("use-ontology", False))
     config["number_of_runs"] = int(flask.request.form["number-of-runs"])

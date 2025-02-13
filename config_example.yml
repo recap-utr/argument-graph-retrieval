@@ -45,6 +45,7 @@ candidates_max_rank: 3
 
 perform_mac: true
 perform_fac: true
+ideal_mac: false
 a_star_queue_limit: 10000
 
 stemming: false
