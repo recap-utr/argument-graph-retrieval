@@ -30,7 +30,8 @@ flask_port: 8888
 # Default values (can be adjusted in web app)
 operations:
   - mean
-embeddings_filter: []
+embeddings_filter:
+  - use-t
 
 similarity_method: cosine
 token_weighting: none
