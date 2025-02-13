@@ -32,21 +32,21 @@ class Embeddings(object):
     @staticmethod
     def get_instance():
         """ Static access method. """
-        if Embeddings._instance == None:
+        if Embeddings._instance is None:
             Embeddings()
 
         for filename in config["embeddings_filter"]:
-            Embeddings._instance[filename].load()
+            Embeddings._instance[filename].load() # pyright: ignore
 
         return {
             key: value
-            for key, value in Embeddings._instance.items()
+            for key, value in Embeddings._instance.items() # pyright: ignore
             if key in config["embeddings_filter"]
         }
 
     @staticmethod
     def keys():
-        return Embeddings._instance.keys()
+        return Embeddings._instance.keys() # pyright: ignore
 
     def __init__(self):
         """ Virtually private constructor. """
@@ -81,7 +81,7 @@ class Embedding(object):
         elif obj == "use":
             cls = hub.module.Module
 
-        return isinstance(self.embedding, cls)
+        return isinstance(self.embedding, cls) # pyright: ignore
 
     def load(self) -> None:
         if self.embedding is None:
@@ -239,7 +239,7 @@ class Embedding(object):
                 return np.power(
                     np.mean(np.power(np.array(vals, dtype=complex), p), axis=0), 1 / p
                 ).real
-            except:
+            except Exception:
                 logger.error(f"Could not calculate mean for operation {operation}.")
 
     def __getitem__(self, key: str) -> np.ndarray:

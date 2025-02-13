@@ -1,6 +1,5 @@
 from __future__ import absolute_import, annotations
 
-import math
 from dataclasses import dataclass, field
 from typing import Any, Dict, List, Optional
 
@@ -33,11 +32,11 @@ class Ontology(object):
     root_node: Optional[OntologyNode]
 
     @staticmethod
-    def get_instance():
+    def get_instance() -> Ontology:
         """ Static access method. """
-        if Ontology._instance == None:
+        if Ontology._instance is None:
             Ontology()
-        return Ontology._instance
+        return Ontology._instance # pyright: ignore
 
     def __init__(self) -> None:
         """ Virtually private constructor. """
@@ -49,7 +48,7 @@ class Ontology(object):
                 self._load_ontology(yaml.safe_load(f))
 
     def _load_ontology(
-        self, nodes_dict: Dict[str, Any], parent: OntologyNode = None, depth: int = 0
+        self, nodes_dict: Dict[str, Any], parent: Optional[OntologyNode] = None, depth: int = 0
     ) -> None:
         if nodes_dict is not None:
             current_node = self.add_node(nodes_dict["val"], depth, parent)

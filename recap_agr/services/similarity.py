@@ -1,9 +1,8 @@
 from __future__ import absolute_import, annotations
 
 import logging
-from operator import itemgetter
-from typing import Any, Dict, List, Set, Tuple
 from timeit import default_timer as timer
+from typing import Any, Dict, List
 
 import numpy as np
 import scipy
@@ -11,7 +10,7 @@ from nltk.metrics import edit_distance
 
 from ..models.graph import Edge, Graph, Node
 from ..models.nlp import Embeddings
-from ..models.ontology import Ontology, OntologyNode
+from ..models.ontology import Ontology
 from ..models.result import Result
 from ..services import utils
 
@@ -27,14 +26,14 @@ class Similarity(object):
     _instance = None
 
     @staticmethod
-    def get_instance():
-        """ Static access method. """
-        if Similarity._instance == None:
+    def get_instance() -> Similarity:
+        """Static access method."""
+        if Similarity._instance is None:
             Similarity()
-        return Similarity._instance
+        return Similarity._instance # pyright: ignore
 
     def __init__(self):
-        """ Virtually private constructor. """
+        """Virtually private constructor."""
         if Similarity._instance is not None:
             raise Exception("This class is a singleton!")
         else:
@@ -45,19 +44,14 @@ class Similarity(object):
     ) -> List[Result]:
         """Compute similarity between multiple graphs"""
 
-        start_time = timer()
         similarities: List[Result] = []
 
         for graph in graphs.values():
-            similarities.append(
-                Result(graph, self.graph_similarity(graph, query_graph), timer() - start_time)
-            )
+            start_time = timer()
+            sim = self.graph_similarity(graph, query_graph)
+            similarities.append(Result(graph, sim, timer() - start_time))
 
-        similarities = sorted(
-            similarities, key=lambda result: result.similarity, reverse=True
-        )
-
-        return similarities
+        return sorted(similarities, key=lambda result: result.similarity, reverse=True)
 
     def _cosine_similarity(self, vec1: np.ndarray, vec2: np.ndarray) -> float:
         """Compute cosine similarity between two vectors"""
@@ -67,7 +61,7 @@ class Similarity(object):
         if vec1.any() and vec2.any():
             try:
                 sim = 1 - scipy.spatial.distance.cosine(vec1, vec2)
-            except:
+            except Exception:
                 pass
 
         return sim
@@ -87,7 +81,7 @@ class Similarity(object):
                     )
                     / np.pi
                 )
-            except:
+            except Exception:
                 pass
 
         return sim

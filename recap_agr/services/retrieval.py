@@ -4,11 +4,11 @@ import bisect
 import logging
 import multiprocessing
 import random
-from typing import Dict, List, Tuple, Union, Optional
+from typing import List, Tuple, Union, Optional
 from timeit import default_timer as timer
 
 from ..models.graph import Edge, Graph, Node
-from ..models.mapping import Mapping, SearchNode
+from ..models.mapping import SearchNode
 from ..models.result import Result
 from ..services import utils
 from ..services.similarity import Similarity
@@ -119,7 +119,7 @@ def select1(s: SearchNode, query_graph: Graph, case_graph: Graph) -> Tuple:
     return key_q, x_q, iterator
 
 
-def select2(s: SearchNode, query_graph: Graph, case_graph: Graph) -> Tuple:
+def select2(s: SearchNode, query_graph: Graph, case_graph: Graph) -> None:
     pass
 
 

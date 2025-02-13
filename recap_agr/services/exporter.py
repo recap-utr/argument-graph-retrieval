@@ -6,7 +6,7 @@ import logging
 import os
 import time
 from collections import defaultdict
-from typing import Any, Dict, List, Optional, Tuple
+from typing import Any, Dict, List, Optional, cast
 
 import numpy as np
 
@@ -52,7 +52,7 @@ def export_results(
     filename = os.path.join(
         config["results_folder"], "{}-{}".format(timestamp, query_file_name)
     )
-    fieldnames = ["name", "rank", "similarity", "text"]
+    fieldnames = ["name", "rank", "similarity", "text", "duration"]
 
     if not os.path.exists(config["results_folder"]):
         os.makedirs(config["results_folder"])
@@ -108,7 +108,7 @@ def get_results_aggregated(
         for key, value in eval_type.items():
             eval_type[key] = round((value) / len(evaluations), 3)
 
-    return eval_dict_aggr
+    return cast(Dict[str, Dict[str, float]], eval_dict_aggr)
 
 
 def export_results_aggregated(
@@ -129,7 +129,7 @@ def export_results_aggregated(
             for value in eval_type.values():
                 tex_values.append(r"\(" + str(round(value, 3)) + r"\)")
 
-        tex_str = r"& {} \\".format(" & ".join(tex_values))
+        # tex_str = r"& {} \\".format(" & ".join(tex_values))
 
         json_out = {
             "Results": evaluation,

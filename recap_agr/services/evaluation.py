@@ -6,7 +6,7 @@ import logging
 import math
 import os
 from collections import OrderedDict
-from typing import Dict, List, Set, Tuple
+from typing import Dict, List, Tuple
 
 from ..libs.ndcg import ndcg
 from ..models.graph import Graph

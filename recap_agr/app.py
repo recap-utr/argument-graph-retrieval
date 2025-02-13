@@ -3,25 +3,22 @@ from __future__ import absolute_import, annotations
 import json
 import logging
 import os
-import sys
 import traceback
 from timeit import default_timer as timer
-from typing import Any, Callable, Dict, List, Optional, Set, Tuple
+from typing import Dict, List
 
 import flask
-import gensim
 import nltk
 
+from .cli.texify import texify
 from .models.graph import Graph
 from .models.nlp import Embeddings
-from .models.ontology import Ontology
 from .models.result import Result
 from .services import exporter, importer, retrieval, utils
 from .services.evaluation import Evaluation
 from .services.similarity import Similarity
 from .services.token_weighter import TokenWeighter
 from .services.vectorizer import Vectorizer
-from .cli.texify import texify
 
 logger = logging.getLogger("recap")
 logger.setLevel(logging.INFO)
@@ -80,8 +77,8 @@ def run() -> None:
                         for filename in sorted(os.listdir(config["queries_folder"])):
                             if filename.endswith(".json"):
                                 with open(
-                                        os.path.join(config["queries_folder"], filename),
-                                        "r",
+                                    os.path.join(config["queries_folder"], filename),
+                                    "r",
                                 ) as file:
                                     query_files[filename] = file.read()
 
@@ -162,7 +159,7 @@ def run() -> None:
                         fac_results = ""
                 else:
                     flask.flash("No operation (MAC/FAC) has been selected", "warning")
-            except:
+            except Exception:
                 flask.flash(traceback.format_exc(), "error")
 
         return flask.render_template(

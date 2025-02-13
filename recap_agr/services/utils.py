@@ -1,15 +1,11 @@
 from __future__ import absolute_import, annotations
 
-import json
 import logging
-import re
 import sys
-from typing import Any, Dict, Generator, List, Set, Tuple
+from typing import Any, Dict, Generator, List
 
 import nltk
-import numpy as np
 from ruamel import yaml
-import tensorflow as tf
 
 logger = logging.getLogger("recap")
 
@@ -27,7 +23,7 @@ class Config:
         """ Static access method. """
         if Config._instance is None:
             Config()
-        return Config._instance
+        return Config._instance # pyright: ignore
 
     def __init__(self):
         """ Virtually private constructor. """
@@ -49,7 +45,7 @@ class Config:
                 f"Accessing config '{key}' not possible.", self._config_error
             )
 
-    def __setitem__(self, key: str, value: str):
+    def __setitem__(self, key: str, value: Any):
         if key in self._config:
             self._config[key] = value
         else:
@@ -118,7 +114,7 @@ def print_progress(iteration, total, prefix="", suffix="", decimals=1, bar_lengt
     filled_length = int(round(bar_length * iteration / float(total)))
     bar = "█" * filled_length + "—" * (bar_length - filled_length)
 
-    sys.stdout.write("\r%s |%s| %s%s %s" % (prefix, bar, percents, "%", suffix)),
+    sys.stdout.write("\r%s |%s| %s%s %s" % (prefix, bar, percents, "%", suffix)), # pyright: ignore
 
     if iteration + 1 == total:
         sys.stdout.write("\n")
