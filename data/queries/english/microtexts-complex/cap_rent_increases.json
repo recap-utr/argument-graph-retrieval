@@ -1,0 +1,85 @@
+{
+  "nodes": [
+    {
+      "nodeID": 1001,
+      "timestamp": "2022-04-19 10:14:54",
+      "text": "Of course, some repairs have to be done.",
+      "type": "I"
+    },
+    {
+      "nodeID": 1002,
+      "timestamp": "2022-04-19 10:14:50",
+      "text": "Isn\u2019t it unfair to pay more rent than my previous resident, simply because I am new?",
+      "type": "I"
+    },
+    {
+      "nodeID": 1003,
+      "timestamp": "2022-04-19 10:14:58",
+      "text": "But the previous resident could have covered them.",
+      "type": "I"
+    },
+    {
+      "nodeID": 1004,
+      "timestamp": "2022-04-19 10:17:45",
+      "text": "Default",
+      "type": "RA"
+    },
+    {
+      "nodeID": 1005,
+      "timestamp": "2022-04-19 10:17:31",
+      "text": "If the rental concept was profitable a few weeks ago with the old rent,it cannot be unprofitable now with the same rent.",
+      "type": "I"
+    },
+    {
+      "nodeID": 1006,
+      "timestamp": "2022-04-19 10:17:10",
+      "text": "Default",
+      "type": "CA"
+    },
+    {
+      "nodeID": 1007,
+      "timestamp": "2022-04-19 10:17:00",
+      "text": "Default",
+      "type": "CA"
+    }
+  ],
+  "edges": [
+    {
+      "edgeID": 5001,
+      "fromID": 1003,
+      "toID": 1007,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5002,
+      "fromID": 1001,
+      "toID": 1006,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5003,
+      "fromID": 1005,
+      "toID": 1004,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5004,
+      "fromID": 1006,
+      "toID": 1002,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5005,
+      "fromID": 1007,
+      "toID": 1001,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5006,
+      "fromID": 1004,
+      "toID": 1002,
+      "formEdgeID": null
+    }
+  ],
+  "locutions": []
+}

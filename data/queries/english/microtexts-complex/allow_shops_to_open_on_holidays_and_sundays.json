@@ -1,0 +1,97 @@
+{
+  "nodes": [
+    {
+      "nodeID": 1001,
+      "timestamp": "2022-04-19 09:40:03",
+      "text": "Even the government wants me to spend my money in those shops to get taxes.",
+      "type": "I"
+    },
+    {
+      "nodeID": 1002,
+      "timestamp": "2022-04-19 09:38:29",
+      "text": "Default",
+      "type": "CA"
+    },
+    {
+      "nodeID": 1003,
+      "timestamp": "2022-04-19 09:38:56",
+      "text": "But they can have their freetime, when I am at work.",
+      "type": "I"
+    },
+    {
+      "nodeID": 1004,
+      "timestamp": "2022-04-19 09:37:44",
+      "text": "Of course, people will then have to work in those shops.\n",
+      "type": "I"
+    },
+    {
+      "nodeID": 1005,
+      "timestamp": "2022-04-19 09:40:20",
+      "text": "Default",
+      "type": "RA"
+    },
+    {
+      "nodeID": 1006,
+      "timestamp": "2022-04-19 09:36:49",
+      "text": "Shops should be allowed to get my money at least in some way.",
+      "type": "I"
+    },
+    {
+      "nodeID": 1007,
+      "timestamp": "2022-04-19 09:39:39",
+      "text": "Default",
+      "type": "CA"
+    },
+    {
+      "nodeID": 1008,
+      "timestamp": "2022-04-19 09:40:39",
+      "text": "I cannot spend my money, when the shops are closed at the weekends.",
+      "type": "I"
+    }
+  ],
+  "edges": [
+    {
+      "edgeID": 5001,
+      "fromID": 1003,
+      "toID": 1007,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5002,
+      "fromID": 1008,
+      "toID": 1005,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5003,
+      "fromID": 1005,
+      "toID": 1006,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5004,
+      "fromID": 1004,
+      "toID": 1002,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5005,
+      "fromID": 1007,
+      "toID": 1004,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5006,
+      "fromID": 1001,
+      "toID": 1005,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5007,
+      "fromID": 1002,
+      "toID": 1006,
+      "formEdgeID": null
+    }
+  ],
+  "locutions": []
+}

@@ -1,0 +1,61 @@
+{
+  "nodes": [
+    {
+      "nodeID": 1001,
+      "timestamp": "2022-04-19 10:27:12",
+      "text": "Default",
+      "type": "CA"
+    },
+    {
+      "nodeID": 1002,
+      "timestamp": "2022-04-19 10:26:46",
+      "text": "But once you step into the dog\u2019s poo, it is sticking onto your shoes persistently.",
+      "type": "I"
+    },
+    {
+      "nodeID": 1003,
+      "timestamp": "2022-04-19 10:26:45",
+      "text": "Penalties for dog excrements left on the pavement should be increased.",
+      "type": "I"
+    },
+    {
+      "nodeID": 1004,
+      "timestamp": "2022-04-19 10:26:46",
+      "text": "The dog cannot do anything about its nature.",
+      "type": "I"
+    },
+    {
+      "nodeID": 1005,
+      "timestamp": "2022-04-19 10:27:01",
+      "text": "Default",
+      "type": "CA"
+    }
+  ],
+  "edges": [
+    {
+      "edgeID": 5001,
+      "fromID": 1004,
+      "toID": 1005,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5002,
+      "fromID": 1002,
+      "toID": 1001,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5003,
+      "fromID": 1001,
+      "toID": 1004,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5004,
+      "fromID": 1005,
+      "toID": 1003,
+      "formEdgeID": null
+    }
+  ],
+  "locutions": []
+}

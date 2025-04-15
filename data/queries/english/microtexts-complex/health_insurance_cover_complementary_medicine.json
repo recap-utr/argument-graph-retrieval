@@ -1,0 +1,109 @@
+{
+  "nodes": [
+    {
+      "nodeID": 1001,
+      "timestamp": "2022-04-19 10:24:19",
+      "text": "Default",
+      "type": "CA"
+    },
+    {
+      "nodeID": 1002,
+      "timestamp": "2022-04-19 10:22:36",
+      "text": "But the proof is missing in most cases.",
+      "type": "I"
+    },
+    {
+      "nodeID": 1003,
+      "timestamp": "2022-04-19 10:23:32",
+      "text": "Default",
+      "type": "CA"
+    },
+    {
+      "nodeID": 1004,
+      "timestamp": "2022-04-19 10:23:50",
+      "text": "But since one does not know with certainty about the effectiveness of those treatments, it is best to rely on therapies with success guaranteed.",
+      "type": "I"
+    },
+    {
+      "nodeID": 1005,
+      "timestamp": "2022-04-19 10:22:35",
+      "text": "Health insurance companies should not pay for nonsense like complementary-medicine treatments.\n",
+      "type": "I"
+    },
+    {
+      "nodeID": 1006,
+      "timestamp": "2022-04-19 10:23:05",
+      "text": "Default",
+      "type": "CA"
+    },
+    {
+      "nodeID": 1007,
+      "timestamp": "2022-04-19 10:22:36",
+      "text": "If the effect and its medical benefits is proofen, the payments are a well use of the money.\n",
+      "type": "I"
+    },
+    {
+      "nodeID": 1008,
+      "timestamp": "2022-04-19 10:25:29",
+      "text": "Default",
+      "type": "CA"
+    },
+    {
+      "nodeID": 1009,
+      "timestamp": "2022-04-19 10:22:36",
+      "text": "Patients often belief in the methods and suffer less after their application.",
+      "type": "I"
+    }
+  ],
+  "edges": [
+    {
+      "edgeID": 5001,
+      "fromID": 1004,
+      "toID": 1008,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5002,
+      "fromID": 1002,
+      "toID": 1003,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5003,
+      "fromID": 1007,
+      "toID": 1006,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5004,
+      "fromID": 1008,
+      "toID": 1001,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5005,
+      "fromID": 1003,
+      "toID": 1007,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5006,
+      "fromID": 1001,
+      "toID": 1005,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5007,
+      "fromID": 1009,
+      "toID": 1001,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5008,
+      "fromID": 1006,
+      "toID": 1005,
+      "formEdgeID": null
+    }
+  ],
+  "locutions": []
+}

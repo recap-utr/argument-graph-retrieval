@@ -1,0 +1,85 @@
+{
+  "nodes": [
+    {
+      "nodeID": 1001,
+      "timestamp": "2022-06-14 16:32:15",
+      "text": "Default",
+      "type": "RA"
+    },
+    {
+      "nodeID": 1002,
+      "timestamp": "2022-06-14 16:32:14",
+      "text": "Default",
+      "type": "CA"
+    },
+    {
+      "nodeID": 1003,
+      "timestamp": "2022-06-14 16:31:59",
+      "text": "Visiting the doctor on a regular basis should stay mandatory for everybody.",
+      "type": "I"
+    },
+    {
+      "nodeID": 1004,
+      "timestamp": "2022-06-14 16:31:58",
+      "text": "If there would exist a pill for every desease, including hangover and other side effects of a drunk night, this would be best.",
+      "type": "I"
+    },
+    {
+      "nodeID": 1005,
+      "timestamp": "2022-06-14 16:32:02",
+      "text": "But this does not exist.",
+      "type": "I"
+    },
+    {
+      "nodeID": 1006,
+      "timestamp": "2022-06-14 16:32:12",
+      "text": "Default",
+      "type": "CA"
+    },
+    {
+      "nodeID": 1007,
+      "timestamp": "2022-06-14 16:31:57",
+      "text": "A new life may already have begun.",
+      "type": "I"
+    }
+  ],
+  "edges": [
+    {
+      "edgeID": 5001,
+      "fromID": 1001,
+      "toID": 1005,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5002,
+      "fromID": 1005,
+      "toID": 1002,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5003,
+      "fromID": 1006,
+      "toID": 1003,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5004,
+      "fromID": 1004,
+      "toID": 1006,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5005,
+      "fromID": 1007,
+      "toID": 1001,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5006,
+      "fromID": 1002,
+      "toID": 1004,
+      "formEdgeID": null
+    }
+  ],
+  "locutions": []
+}

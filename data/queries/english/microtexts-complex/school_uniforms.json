@@ -1,0 +1,85 @@
+{
+  "nodes": [
+    {
+      "nodeID": 1001,
+      "timestamp": "2022-06-15 17:52:09",
+      "text": "Some may find the idea of a school uniform anachronistic.",
+      "type": "I"
+    },
+    {
+      "nodeID": 1002,
+      "timestamp": "2022-06-15 17:52:07",
+      "text": "Brands are uniforms as well in another way. Also many students are dressing the same way already without official school uniforms.",
+      "type": "I"
+    },
+    {
+      "nodeID": 1003,
+      "timestamp": "2022-06-15 17:52:15",
+      "text": "Default",
+      "type": "CA"
+    },
+    {
+      "nodeID": 1004,
+      "timestamp": "2022-06-15 17:52:04",
+      "text": "The school would focus more on the character of the students than onto their families wealth and thereby school uniforms would have a great benefit.",
+      "type": "I"
+    },
+    {
+      "nodeID": 1005,
+      "timestamp": "2022-06-15 17:52:17",
+      "text": "Default",
+      "type": "CA"
+    },
+    {
+      "nodeID": 1006,
+      "timestamp": "2022-06-15 17:52:12",
+      "text": "Furthermore there would be a great intervention into the decision making of parents and students.",
+      "type": "I"
+    },
+    {
+      "nodeID": 1007,
+      "timestamp": "2022-06-15 17:52:14",
+      "text": "Default",
+      "type": "CA"
+    }
+  ],
+  "edges": [
+    {
+      "edgeID": 5001,
+      "fromID": 1006,
+      "toID": 1003,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5002,
+      "fromID": 1007,
+      "toID": 1004,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5003,
+      "fromID": 1003,
+      "toID": 1004,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5004,
+      "fromID": 1005,
+      "toID": 1003,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5005,
+      "fromID": 1002,
+      "toID": 1005,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5006,
+      "fromID": 1001,
+      "toID": 1007,
+      "formEdgeID": null
+    }
+  ],
+  "locutions": []
+}

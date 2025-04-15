@@ -1,0 +1,109 @@
+{
+  "nodes": [
+    {
+      "nodeID": 1001,
+      "timestamp": "2022-06-14 16:24:16",
+      "text": "The retirement age should be raised to 65.",
+      "type": "I"
+    },
+    {
+      "nodeID": 1002,
+      "timestamp": "2022-06-14 16:24:18",
+      "text": "Forced to retire, experience will be lost.",
+      "type": "I"
+    },
+    {
+      "nodeID": 1003,
+      "timestamp": "2022-06-14 16:24:32",
+      "text": "Default",
+      "type": "CA"
+    },
+    {
+      "nodeID": 1004,
+      "timestamp": "2022-06-14 16:24:19",
+      "text": "People get old healthier than a few decades ago.",
+      "type": "I"
+    },
+    {
+      "nodeID": 1005,
+      "timestamp": "2022-06-14 16:24:27",
+      "text": "Default",
+      "type": "RA"
+    },
+    {
+      "nodeID": 1006,
+      "timestamp": "2022-06-14 16:24:29",
+      "text": "Default",
+      "type": "RA"
+    },
+    {
+      "nodeID": 1007,
+      "timestamp": "2022-06-14 16:24:26",
+      "text": "Default",
+      "type": "RA"
+    },
+    {
+      "nodeID": 1008,
+      "timestamp": "2022-06-14 16:24:17",
+      "text": "You would have to organize more leisure activities for old people.",
+      "type": "I"
+    },
+    {
+      "nodeID": 1009,
+      "timestamp": "2022-06-14 16:24:22",
+      "text": "People stay healthy to that age, nowadays.",
+      "type": "I"
+    }
+  ],
+  "edges": [
+    {
+      "edgeID": 5001,
+      "fromID": 1003,
+      "toID": 1005,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5002,
+      "fromID": 1006,
+      "toID": 1001,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5003,
+      "fromID": 1008,
+      "toID": 1006,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5004,
+      "fromID": 1005,
+      "toID": 1001,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5005,
+      "fromID": 1007,
+      "toID": 1001,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5006,
+      "fromID": 1004,
+      "toID": 1003,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5007,
+      "fromID": 1002,
+      "toID": 1007,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5008,
+      "fromID": 1009,
+      "toID": 1005,
+      "formEdgeID": null
+    }
+  ],
+  "locutions": []
+}

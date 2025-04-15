@@ -1,0 +1,85 @@
+{
+  "nodes": [
+    {
+      "nodeID": 1001,
+      "timestamp": "2022-06-15 17:52:09",
+      "text": "Every major issue coming up over the years of building do show clearly the shortcomings of the entire planning.",
+      "type": "I"
+    },
+    {
+      "nodeID": 1002,
+      "timestamp": "2022-06-15 17:52:07",
+      "text": "Billions have been invested already. Therefore it may be a waste of money to decline everything.",
+      "type": "I"
+    },
+    {
+      "nodeID": 1003,
+      "timestamp": "2022-06-15 17:52:15",
+      "text": "Default",
+      "type": "CA"
+    },
+    {
+      "nodeID": 1004,
+      "timestamp": "2022-06-15 17:52:04",
+      "text": "BER should be reshaped from scratch.",
+      "type": "I"
+    },
+    {
+      "nodeID": 1005,
+      "timestamp": "2022-06-15 17:52:17",
+      "text": "Default",
+      "type": "CA"
+    },
+    {
+      "nodeID": 1006,
+      "timestamp": "2022-06-15 17:52:12",
+      "text": "Thereby it is never going to be finished.",
+      "type": "I"
+    },
+    {
+      "nodeID": 1007,
+      "timestamp": "2022-06-15 17:52:14",
+      "text": "Default",
+      "type": "RA"
+    }
+  ],
+  "edges": [
+    {
+      "edgeID": 5001,
+      "fromID": 1005,
+      "toID": 1004,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5002,
+      "fromID": 1007,
+      "toID": 1004,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5003,
+      "fromID": 1003,
+      "toID": 1004,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5004,
+      "fromID": 1001,
+      "toID": 1007,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5005,
+      "fromID": 1006,
+      "toID": 1003,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5006,
+      "fromID": 1002,
+      "toID": 1005,
+      "formEdgeID": null
+    }
+  ],
+  "locutions": []
+}

@@ -1,0 +1,85 @@
+{
+  "nodes": [
+    {
+      "nodeID": 1001,
+      "timestamp": "2022-04-19 10:19:29",
+      "text": "German students should not pay any kind of fee for their education.",
+      "type": "I"
+    },
+    {
+      "nodeID": 1002,
+      "timestamp": "2022-04-19 10:21:29",
+      "text": "Default",
+      "type": "RA"
+    },
+    {
+      "nodeID": 1003,
+      "timestamp": "2022-04-19 10:19:30",
+      "text": "Studying and taking higher degrees has to be a basic right for everyone. What is our society without constant learning?",
+      "type": "I"
+    },
+    {
+      "nodeID": 1004,
+      "timestamp": "2022-04-19 10:19:31",
+      "text": "They hinder students from studying by forcing them to work.",
+      "type": "I"
+    },
+    {
+      "nodeID": 1005,
+      "timestamp": "2022-04-19 10:19:30",
+      "text": "Tuition fees limit the access to education.",
+      "type": "I"
+    },
+    {
+      "nodeID": 1006,
+      "timestamp": "2022-04-19 10:21:23",
+      "text": "Default",
+      "type": "RA"
+    },
+    {
+      "nodeID": 1007,
+      "timestamp": "2022-04-19 10:21:27",
+      "text": "Default",
+      "type": "RA"
+    }
+  ],
+  "edges": [
+    {
+      "edgeID": 5001,
+      "fromID": 1003,
+      "toID": 1006,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5002,
+      "fromID": 1002,
+      "toID": 1005,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5003,
+      "fromID": 1005,
+      "toID": 1007,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5004,
+      "fromID": 1006,
+      "toID": 1001,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5005,
+      "fromID": 1007,
+      "toID": 1001,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5006,
+      "fromID": 1004,
+      "toID": 1002,
+      "formEdgeID": null
+    }
+  ],
+  "locutions": []
+}

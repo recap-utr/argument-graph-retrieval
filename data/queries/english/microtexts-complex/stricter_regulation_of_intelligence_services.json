@@ -1,0 +1,109 @@
+{
+  "nodes": [
+    {
+      "nodeID": 1001,
+      "timestamp": "2022-06-15 17:32:15",
+      "text": "These problems concern mostly the most powerful intelligence services of the world in democratic countries: CIA and MI6.",
+      "type": "I"
+    },
+    {
+      "nodeID": 1002,
+      "timestamp": "2022-06-15 17:32:17",
+      "text": "Default",
+      "type": "RA"
+    },
+    {
+      "nodeID": 1003,
+      "timestamp": "2022-06-15 17:32:02",
+      "text": "This is clearly visible after the disclosures of Edward Snowden and Julian Assange and their treatment.",
+      "type": "I"
+    },
+    {
+      "nodeID": 1004,
+      "timestamp": "2022-06-15 17:32:09",
+      "text": "The BND has supported our surveillance for quite a long time.",
+      "type": "I"
+    },
+    {
+      "nodeID": 1005,
+      "timestamp": "2022-06-15 17:32:10",
+      "text": "Default",
+      "type": "RA"
+    },
+    {
+      "nodeID": 1006,
+      "timestamp": "2022-06-15 17:32:06",
+      "text": "The German services and others do collaborate with CIA and MI6 closely...",
+      "type": "I"
+    },
+    {
+      "nodeID": 1007,
+      "timestamp": "2022-06-15 17:32:04",
+      "text": "Intelligence services must urgently be regulated more tightly by parliament.",
+      "type": "I"
+    },
+    {
+      "nodeID": 1008,
+      "timestamp": "2022-06-15 17:32:12",
+      "text": "Default",
+      "type": "CA"
+    },
+    {
+      "nodeID": 1009,
+      "timestamp": "2022-06-15 17:32:13",
+      "text": "Default",
+      "type": "CA"
+    }
+  ],
+  "edges": [
+    {
+      "edgeID": 5001,
+      "fromID": 1005,
+      "toID": 1007,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5002,
+      "fromID": 1002,
+      "toID": 1006,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5003,
+      "fromID": 1009,
+      "toID": 1008,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5004,
+      "fromID": 1006,
+      "toID": 1009,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5005,
+      "fromID": 1008,
+      "toID": 1005,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5006,
+      "fromID": 1001,
+      "toID": 1008,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5007,
+      "fromID": 1004,
+      "toID": 1002,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5008,
+      "fromID": 1003,
+      "toID": 1005,
+      "formEdgeID": null
+    }
+  ],
+  "locutions": []
+}

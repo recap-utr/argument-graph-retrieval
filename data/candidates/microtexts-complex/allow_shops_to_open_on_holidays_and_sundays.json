@@ -1,0 +1,22 @@
+{
+  "candidates": [
+    "nodeset6375.json",
+    "nodeset6410.json",
+    "nodeset6419.json",
+    "nodeset6449.json",
+    "nodeset6451.json",
+    "nodeset6457.json",
+    "nodeset6462.json",
+    "nodeset6466.json"
+  ],
+  "rankings": {
+    "nodeset6375.json": 1,
+    "nodeset6410.json": 3,
+    "nodeset6419.json": 3,
+    "nodeset6449.json": 2,
+    "nodeset6451.json": 3,
+    "nodeset6457.json": 2,
+    "nodeset6462.json": 3,
+    "nodeset6466.json": 3
+  }
+}

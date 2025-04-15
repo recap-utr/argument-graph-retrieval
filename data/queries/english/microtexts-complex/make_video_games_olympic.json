@@ -1,0 +1,121 @@
+{
+  "nodes": [
+    {
+      "nodeID": 1001,
+      "timestamp": "2022-06-15 17:40:42",
+      "text": "Olympic events are rooted in old traditions.",
+      "type": "I"
+    },
+    {
+      "nodeID": 1002,
+      "timestamp": "2022-06-15 17:40:44",
+      "text": "Default",
+      "type": "CA"
+    },
+    {
+      "nodeID": 1003,
+      "timestamp": "2022-06-15 17:40:46",
+      "text": "Default",
+      "type": "RA"
+    },
+    {
+      "nodeID": 1004,
+      "timestamp": "2022-06-15 17:47:35",
+      "text": "The events have a cultural determined character. ",
+      "type": "I"
+    },
+    {
+      "nodeID": 1005,
+      "timestamp": "2022-06-15 17:40:39",
+      "text": "Yet sports are usually associated with physical training.",
+      "type": "I"
+    },
+    {
+      "nodeID": 1006,
+      "timestamp": "2022-06-15 17:40:43",
+      "text": "Computer games should not be considerd Olympic events.",
+      "type": "I"
+    },
+    {
+      "nodeID": 1007,
+      "timestamp": "2022-06-15 17:40:47",
+      "text": "Default",
+      "type": "RA"
+    },
+    {
+      "nodeID": 1008,
+      "timestamp": "2022-06-15 17:40:40",
+      "text": "Other card play games as well as chess are not Olympic events either...",
+      "type": "I"
+    },
+    {
+      "nodeID": 1009,
+      "timestamp": "2022-06-15 17:40:37",
+      "text": "The society is strongly affected by video games.",
+      "type": "I"
+    },
+    {
+      "nodeID": 1010,
+      "timestamp": "2022-06-15 17:40:49",
+      "text": "Default",
+      "type": "RA"
+    }
+  ],
+  "edges": [
+    {
+      "edgeID": 5001,
+      "fromID": 1005,
+      "toID": 1003,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5002,
+      "fromID": 1008,
+      "toID": 1010,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5003,
+      "fromID": 1001,
+      "toID": 1007,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5004,
+      "fromID": 1007,
+      "toID": 1006,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5005,
+      "fromID": 1009,
+      "toID": 1002,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5006,
+      "fromID": 1002,
+      "toID": 1006,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5007,
+      "fromID": 1010,
+      "toID": 1006,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5008,
+      "fromID": 1003,
+      "toID": 1006,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5009,
+      "fromID": 1004,
+      "toID": 1002,
+      "formEdgeID": null
+    }
+  ],
+  "locutions": []
+}

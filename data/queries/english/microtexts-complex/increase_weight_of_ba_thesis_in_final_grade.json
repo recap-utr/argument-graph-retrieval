@@ -1,0 +1,109 @@
+{
+  "nodes": [
+    {
+      "nodeID": 1001,
+      "timestamp": "2022-06-15 17:19:19",
+      "text": "This is even wanted by the Bachelor-Master-System of Bolognia: The final grade should be subsummized from various individual grades.",
+      "type": "I"
+    },
+    {
+      "nodeID": 1002,
+      "timestamp": "2022-06-15 17:19:21",
+      "text": "This system is more related to the real working world, where constant pressure and performance is required as well. No singular peak performance needed in most cases.",
+      "type": "I"
+    },
+    {
+      "nodeID": 1003,
+      "timestamp": "2022-06-15 17:19:40",
+      "text": "Default",
+      "type": "RA"
+    },
+    {
+      "nodeID": 1004,
+      "timestamp": "2022-06-15 17:19:36",
+      "text": "Default",
+      "type": "CA"
+    },
+    {
+      "nodeID": 1005,
+      "timestamp": "2022-06-15 17:19:16",
+      "text": "But since this is not the case, we have to accept, that it is currently wise, not to overweigh the BA thesis.",
+      "type": "I"
+    },
+    {
+      "nodeID": 1006,
+      "timestamp": "2022-06-15 17:19:15",
+      "text": "If you want to strengthen the meaning of the final BA thesis, you will have to change the difficulty of it.",
+      "type": "I"
+    },
+    {
+      "nodeID": 1007,
+      "timestamp": "2022-06-15 17:19:18",
+      "text": "The weight is not distributed correctly, since the workload varies strongly from professor to professor.",
+      "type": "I"
+    },
+    {
+      "nodeID": 1008,
+      "timestamp": "2022-06-15 17:19:37",
+      "text": "Default",
+      "type": "RA"
+    },
+    {
+      "nodeID": 1009,
+      "timestamp": "2022-06-15 17:19:42",
+      "text": "Default",
+      "type": "CA"
+    }
+  ],
+  "edges": [
+    {
+      "edgeID": 5001,
+      "fromID": 1007,
+      "toID": 1009,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5002,
+      "fromID": 1001,
+      "toID": 1003,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5003,
+      "fromID": 1002,
+      "toID": 1008,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5004,
+      "fromID": 1009,
+      "toID": 1004,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5005,
+      "fromID": 1005,
+      "toID": 1004,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5006,
+      "fromID": 1008,
+      "toID": 1005,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5007,
+      "fromID": 1003,
+      "toID": 1005,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5008,
+      "fromID": 1004,
+      "toID": 1006,
+      "formEdgeID": null
+    }
+  ],
+  "locutions": []
+}

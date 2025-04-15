@@ -1,0 +1,109 @@
+{
+  "nodes": [
+    {
+      "nodeID": 1001,
+      "timestamp": "2022-06-14 16:15:47",
+      "text": "Everybody should pay for public broadcasters.",
+      "type": "I"
+    },
+    {
+      "nodeID": 1002,
+      "timestamp": "2022-06-14 16:15:45",
+      "text": "There are a lot of programmes, that are not worth the money we paid.",
+      "type": "I"
+    },
+    {
+      "nodeID": 1003,
+      "timestamp": "2022-06-14 16:16:43",
+      "text": "Default",
+      "type": "CA"
+    },
+    {
+      "nodeID": 1004,
+      "timestamp": "2022-06-14 16:16:42",
+      "text": "Default",
+      "type": "RA"
+    },
+    {
+      "nodeID": 1005,
+      "timestamp": "2022-06-14 16:16:44",
+      "text": "Default",
+      "type": "RA"
+    },
+    {
+      "nodeID": 1006,
+      "timestamp": "2022-06-14 16:16:45",
+      "text": "Default",
+      "type": "CA"
+    },
+    {
+      "nodeID": 1007,
+      "timestamp": "2022-06-14 16:15:43",
+      "text": "We do want to get our news through the lense of neutral and independent journalists.",
+      "type": "I"
+    },
+    {
+      "nodeID": 1008,
+      "timestamp": "2022-06-14 16:15:49",
+      "text": "The people should be able to decide on their own about the program, they want to pay for.",
+      "type": "I"
+    },
+    {
+      "nodeID": 1009,
+      "timestamp": "2022-06-14 16:16:40",
+      "text": "Because the need for independent media is high. ",
+      "type": "I"
+    }
+  ],
+  "edges": [
+    {
+      "edgeID": 5001,
+      "fromID": 1002,
+      "toID": 1003,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5002,
+      "fromID": 1009,
+      "toID": 1004,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5003,
+      "fromID": 1005,
+      "toID": 1009,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5004,
+      "fromID": 1007,
+      "toID": 1005,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5005,
+      "fromID": 1006,
+      "toID": 1001,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5006,
+      "fromID": 1003,
+      "toID": 1001,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5007,
+      "fromID": 1008,
+      "toID": 1006,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5008,
+      "fromID": 1004,
+      "toID": 1001,
+      "formEdgeID": null
+    }
+  ],
+  "locutions": []
+}

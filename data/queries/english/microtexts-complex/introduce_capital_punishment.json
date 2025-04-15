@@ -1,0 +1,109 @@
+{
+  "nodes": [
+    {
+      "nodeID": 1001,
+      "timestamp": "2022-06-14 16:02:44",
+      "text": "Many people would say, that a murderer already gave up the right of choice over his own life, since he took the choice over anothers life.",
+      "type": "I"
+    },
+    {
+      "nodeID": 1002,
+      "timestamp": "2022-06-14 16:02:17",
+      "text": "Eitherway, who has the right to decide about anothers death anyway.",
+      "type": "I"
+    },
+    {
+      "nodeID": 1003,
+      "timestamp": "2022-06-14 16:02:58",
+      "text": "Default",
+      "type": "RA"
+    },
+    {
+      "nodeID": 1004,
+      "timestamp": "2022-06-14 16:02:20",
+      "text": "The death penalty is illegal in Germany.",
+      "type": "I"
+    },
+    {
+      "nodeID": 1005,
+      "timestamp": "2022-06-14 16:02:12",
+      "text": "Default",
+      "type": "RA"
+    },
+    {
+      "nodeID": 1006,
+      "timestamp": "2022-06-14 16:02:40",
+      "text": "This is liable since the dignity of the human is our highest value in the constitution.",
+      "type": "I"
+    },
+    {
+      "nodeID": 1007,
+      "timestamp": "2022-06-14 16:02:52",
+      "text": "Default",
+      "type": "CA"
+    },
+    {
+      "nodeID": 1008,
+      "timestamp": "2022-06-14 16:02:38",
+      "text": "But since we are better than the murderer, we should not do the same as him and take the choice over anothers life as well.",
+      "type": "I"
+    },
+    {
+      "nodeID": 1009,
+      "timestamp": "2022-06-14 16:02:59",
+      "text": "Default",
+      "type": "CA"
+    }
+  ],
+  "edges": [
+    {
+      "edgeID": 5001,
+      "fromID": 1008,
+      "toID": 1009,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5002,
+      "fromID": 1005,
+      "toID": 1004,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5003,
+      "fromID": 1001,
+      "toID": 1007,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5004,
+      "fromID": 1003,
+      "toID": 1004,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5005,
+      "fromID": 1006,
+      "toID": 1003,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5006,
+      "fromID": 1007,
+      "toID": 1004,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5007,
+      "fromID": 1009,
+      "toID": 1007,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5008,
+      "fromID": 1002,
+      "toID": 1005,
+      "formEdgeID": null
+    }
+  ],
+  "locutions": []
+}

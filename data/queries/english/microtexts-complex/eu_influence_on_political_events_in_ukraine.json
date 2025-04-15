@@ -1,0 +1,109 @@
+{
+  "nodes": [
+    {
+      "nodeID": 1001,
+      "timestamp": "2022-06-15 17:40:42",
+      "text": "Even though the hard clashes in Kiev were almost escalating.",
+      "type": "I"
+    },
+    {
+      "nodeID": 1002,
+      "timestamp": "2022-06-15 17:40:46",
+      "text": "Default",
+      "type": "CA"
+    },
+    {
+      "nodeID": 1003,
+      "timestamp": "2022-06-15 17:40:44",
+      "text": "Default",
+      "type": "CA"
+    },
+    {
+      "nodeID": 1004,
+      "timestamp": "2022-06-15 17:40:39",
+      "text": "The Ukraine partly supports a western democracy.",
+      "type": "I"
+    },
+    {
+      "nodeID": 1005,
+      "timestamp": "2022-06-15 17:40:43",
+      "text": "The EU should not take part in local politics.",
+      "type": "I"
+    },
+    {
+      "nodeID": 1006,
+      "timestamp": "2022-06-15 17:40:47",
+      "text": "Default",
+      "type": "CA"
+    },
+    {
+      "nodeID": 1007,
+      "timestamp": "2022-06-15 17:40:40",
+      "text": "the EU may come about trouble with Russia by doing so.",
+      "type": "I"
+    },
+    {
+      "nodeID": 1008,
+      "timestamp": "2022-06-15 17:40:37",
+      "text": "Although the Ukraine is a European country, geographically speaking.",
+      "type": "I"
+    },
+    {
+      "nodeID": 1009,
+      "timestamp": "2022-06-15 17:40:49",
+      "text": "Default",
+      "type": "RA"
+    }
+  ],
+  "edges": [
+    {
+      "edgeID": 5001,
+      "fromID": 1004,
+      "toID": 1002,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5002,
+      "fromID": 1007,
+      "toID": 1009,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5003,
+      "fromID": 1001,
+      "toID": 1006,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5004,
+      "fromID": 1006,
+      "toID": 1005,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5005,
+      "fromID": 1008,
+      "toID": 1003,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5006,
+      "fromID": 1003,
+      "toID": 1005,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5007,
+      "fromID": 1009,
+      "toID": 1005,
+      "formEdgeID": null
+    },
+    {
+      "edgeID": 5008,
+      "fromID": 1002,
+      "toID": 1005,
+      "formEdgeID": null
+    }
+  ],
+  "locutions": []
+}
